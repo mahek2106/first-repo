@@ -1,0 +1,7 @@
+What is web browser?
+when we serach any content on internet there we can use web browsers
+ example=1)firefox
+         2)chrome(best)
+         3)safari
+         4)ms edge
+         5)opera

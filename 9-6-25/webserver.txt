@@ -1,0 +1,51 @@
+what is web sever?
+web server stores user info on web clouds
+ex: google
+amazon
+go daddy
+===============================================================================================
+what is website?
+collection of webpages
+ex:flipkart
+amazon
+===================================================================================================
+types of website
+1)static website
+-web site is where we can't change or update after creating internet
+2)dynamic website
+-website is where we can change or update after creating internet
+ex:flipkart
+=======================================================================================================================
+URL
+UNIVERSAL RESOURCE LOCATOR
+1)absolute (direct homepage open)
+2)relative (direct webpage open)
+3)hypertect(link)
+==============================================================================================================
+what is www?
+world wide web is used to access any content on internet
+=====================================================================================================
+what is w3c?
+world wide web consortium
+w3c is an organization
+it desides if the tag depricate(remove) or not
+ex:<center?
+<blink>
+=========================================================================================================================
+what is seo?
+search engine optimization
+is organic(free)
+is used for ranking in google
+1)short tel keyword
+ex:flipkart
+2)long tel keyword
+ex:want to purchase shoes
+=========================================================================================================
+what is protocol?
+is such as rules
+1)https:hypertext transfer protocol secure
+
+2)http:hypertext tranfer protocol
+==========================================================================================
+web hosting?
+a service that allow business and individuals to make their website accce
