@@ -15,3 +15,29 @@ redirect one page to another page
 html structure?
 note:structure is also known as boiler plate or skeleton
 index is always a homepage.
+===========================================================================================
+EXTENSION:
+.html or .htm
+===============================================================================================
+html provides tags or element to make any structure of any webpage
+html tags are case insensitive defined enclosed within<> angular braces
+=======================================================================================================
+types of tags
+1)paired tags
+-start and close
+ ex: <p></p>
+ <marquee> </marquee>
+2)non-paired tags
+-start but no need to be closed
+ex:<br> 
+<hr>
+<input>
+<meta>
+===============================================================================================
+html element
+contents + tag = element
+1)blocked element
+100% area covered
+ex:<bg color>
+2)non-blocked element
+==================================================================================================
