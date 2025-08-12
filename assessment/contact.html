@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sample Site — Contact</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/style-flex.css" />
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="logo">CWDesign</div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="service-grid.html" class="nav-link">Services</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="contact-section">
+      <h1>Contact Us</h1>
+
+      
+      <form id="contactForm" method="" action="#" autocomplete="off">
+        
+        <label for="name">Name
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Your name"
+            required
+            minlength="3"
+            maxlength="6"
+            pattern="[A-Za-z]{3,6}"
+            title="3 to 6 alphabetic characters (A–Z). No spaces or numbers."
+          />
+        </label>
+
+        <label for="email">Email
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+          />
+        </label>
+
+        <label for="message">Message
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+
+      <p class="hint">Browser will show validation messages when the form is submitted with invalid fields.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span class="year">2025</span> Core Web Designing. All rights reserved.</p>
+  </footer>
+</body>
+</html>

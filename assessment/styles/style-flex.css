@@ -1,0 +1,120 @@
+/* styles-flex.css - HEX colors only */
+:root{
+  --bg:#f6efe1;
+  --card:#ebe0d2;
+  --accent:#c19a6b;
+  --text:#2b2b2b;
+  --muted:#7a6f68;
+  --invalid:#b00020;
+  --valid:#2e7d32;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.45;
+}
+
+/* Header */
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 28px;
+  background:linear-gradient(90deg, #ebe0d2, #f6efe1);
+  border-bottom:4px solid #cfc0a9;
+}
+.logo{font-weight:700;color:#3a2e27}
+.main-nav{display:flex;gap:16px}
+.main-nav .nav-link{ text-decoration:none; color:var(--text); padding:8px 10px; border-radius:6px;}
+.main-nav .nav-link:hover{background:#efe4d6}
+
+
+.container{
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+  padding:32px;
+  max-width:1100px;
+  margin:24px auto;
+}
+.hero{
+  background:var(--card);
+  padding:28px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+.title{font-size:1.8rem;margin-bottom:8px}
+.subtitle{color:var(--muted)}
+
+/* Cards */
+.cards{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+.card{
+  background:#fff;
+  padding:18px;
+  border-radius:10px;
+  flex:1 1 240px;
+  min-width:220px;
+  border:1px solid #efe7de;
+}
+
+/* Contact form */
+.contact-section{max-width:720px;margin:0 auto}
+label{display:block;margin-bottom:12px;font-weight:600}
+input[type="text"], input[type="email"], textarea{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #d7cec2;
+  margin-top:6px;
+  font-size:1rem;
+  transition:border-color .15s, box-shadow .15s;
+  outline:none;
+}
+
+
+input:invalid, textarea:invalid{
+  border-color:var(--invalid);
+  box-shadow:0 0 0 3px rgba(176,0,32,0.06);
+}
+input:valid, textarea:valid{
+  border-color:var(--valid);
+  box-shadow:0 0 0 3px rgba(46,125,50,0.06);
+}
+
+.form-actions{margin-top:12px}
+button{
+  padding:10px 16px;
+  border-radius:8px;
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  cursor:pointer;
+}
+button:hover{
+    background-color: #ae834d;
+    transition: background-color 0.3s ease;
+}
+
+
+.site-footer{
+  text-align:center;
+  padding:14px 10px;
+  background:#f3eadb;
+  border-top:1px solid #e6dccf;
+  margin-top:32px;
+}
+
+
+@media (max-width:800px){
+  .main-nav{gap:8px}
+  .title{font-size:1.4rem}
+  .container{padding:18px}
+  .cards{flex-direction:column}
+}
