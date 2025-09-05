@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookNest - Book Reservation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📚 BookNest Library Reservation</h1>
+    <p>Reserve your favorite books online with ease!</p>
+  </header>
+
+  <main>
+    <section class="form-container">
+      <h2>Book Reservation Form</h2>
+      <form id="reservationForm">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="bookTitle">Book Title</label>
+          <input type="text" id="bookTitle" placeholder="Enter book title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="authorName">Author Name</label>
+          <input type="text" id="authorName" placeholder="Enter author name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="pickupDate">Pickup Date</label>
+          <input type="date" id="pickupDate" required>
+        </div>
+
+        <div class="btn-group">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="reservation-list">
+      <h2>📖 Reserved Books</h2>
+      <ul id="reservationData"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 BookNest Library | Designed by Mahek Bhalsod</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
