@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <form id="registrationForm" onsubmit="return validateForm()">
+      <h2>Registration Form</h2>
+
+      <label>Name*</label>
+      <input type="text" id="name" placeholder="Enter your name">
+      <span class="error" id="nameError"></span>
+
+      <label>Email*</label>
+      <input type="email" id="email" placeholder="Enter your email">
+      <span class="error" id="emailError"></span>
+
+      <label>Phone*</label>
+      <input type="text" id="phone" placeholder="Enter your phone number">
+      <span class="error" id="phoneError"></span>
+
+      <label>Subject*</label>
+      <select id="subject">
+        <option value="">--Select Subject--</option>
+        <option value="General Inquiry">General Inquiry</option>
+        <option value="Feedback">Feedback</option>
+        <option value="Support">Support</option>
+      </select>
+      <span class="error" id="subjectError"></span>
+
+      <label>Message*</label>
+      <textarea id="message" rows="3" placeholder="Enter your message"></textarea>
+      <span class="error" id="messageError"></span>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
