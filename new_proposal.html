@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Love ✨</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at top,
+    #ffdde1, #ee9ca7, #c471ed, #0f2027);
+  animation: bgFlow 20s infinite alternate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes bgFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Floating lights (AI dreamy effect) */
+.light {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: float 18s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-120px) translateX(80px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+.card {
+  position: relative;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(16px);
+  border-radius: 30px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+  animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+  from { opacity:0; transform: scale(0.9); }
+  to { opacity:1; transform: scale(1); }
+}
+
+.photo {
+  width: 100%;
+  border-radius: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+h1 {
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 13px 28px;
+  border: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 8px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+#yes {
+  background: linear-gradient(135deg, #ff4d6d, #ff758f);
+  color: white;
+}
+
+#no {
+  background: white;
+  color: #ff4d6d;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Kisses & hearts */
+.spark {
+  position: absolute;
+  font-size: 1.8rem;
+  animation: rise 4s linear forwards;
+}
+
+@keyframes rise {
+  from { opacity:1; transform: translateY(0) scale(1); }
+  to { opacity:0; transform: translateY(-320px) scale(1.6); }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.7rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- dreamy lights -->
+<div class="light" style="top:10%; left:15%;"></div>
+<div class="light" style="top:70%; left:70%; animation-delay:4s;"></div>
+<div class="light" style="top:40%; left:80%; animation-delay:7s;"></div>
+
+<audio id="music" loop>
+  <source src="./perfect.mp3.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SCREEN 1 -->
+<div class="card" id="screen1">
+  <img src="./us.jpg.jpeg" class="photo" alt="Us ❤️">
+  <h1>Some stories are written by fate ✨</h1>
+  <p>
+    Out of billions of souls,<br>
+    the universe quietly chose us.
+  </p>
+  <button onclick="startMusic(); next()">Continue 💫</button>
+</div>
+
+<!-- SCREEN 2 -->
+<div class="card hidden" id="screen2">
+  <h1>And then… there was you 💖</h1>
+  <p>
+    My favorite place is anywhere<br>
+    your hand is holding mine.
+  </p>
+  <button onclick="next()">One last thing 💌</button>
+</div>
+
+<!-- SCREEN 3 -->
+<div class="card hidden" id="screen3">
+  <h1>Will you be my Valentine? 🌹</h1>
+  <button id="yes" onclick="sayYes()">YES ❤️</button>
+  <button id="no" onmouseover="escape()">NO 💔</button>
+</div>
+
+<!-- SCREEN 4 -->
+<div class="card hidden" id="screen4">
+  <h1>I LOVE YOU  🥹💘</h1>
+  <p>
+    You make me the happiest,luckiest and strongest gurl.
+    Stay happy always.
+    "There is no me without you".
+  </p>
+</div>
+
+<script>
+let step = 1;
+let musicStarted = false;
+
+function startMusic() {
+  if (!musicStarted) {
+    const m = document.getElementById("music");
+    m.volume = 0.6;
+    m.play().catch(()=>{});
+    musicStarted = true;
+  }
+}
+
+function next() {
+  document.getElementById("screen"+step).classList.add("hidden");
+  step++;
+  document.getElementById("screen"+step).classList.remove("hidden");
+}
+
+function escape() {
+  const btn = document.getElementById("no");
+  btn.style.position = "fixed";
+  btn.style.left = Math.random() * (window.innerWidth - btn.offsetWidth) + "px";
+  btn.style.top = Math.random() * (window.innerHeight - btn.offsetHeight) + "px";
+}
+
+function sayYes() {
+  document.getElementById("screen3").classList.add("hidden");
+  document.getElementById("screen4").classList.remove("hidden");
+  romanceExplosion();
+}
+
+function romanceExplosion() {
+  for (let i=0; i<60; i++) {
+    setTimeout(()=>{
+      const s = document.createElement("div");
+      s.className = "spark";
+      s.innerHTML = Math.random()>0.5 ? "💋" : "💖";
+      s.style.left = Math.random()*window.innerWidth + "px";
+      s.style.bottom = "0";
+      document.body.appendChild(s);
+      setTimeout(()=>s.remove(),4000);
+    }, i*120);
+  }
+}
+</script>
+
+</body>
+</html>
